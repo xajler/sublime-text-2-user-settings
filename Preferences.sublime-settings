@@ -1,21 +1,31 @@
 {
 	"auto_complete_commit_on_tab": true,
-	"bold_folder_labels": true,
-	"color_scheme": "Packages/RailsCasts Colour Scheme/RailsCastsColorScheme.tmTheme",
+	"color_scheme": "Packages/User/Monokai-Black.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
-		".DS_Store",
 		".tags*",
+		"*.log",
+		"*.class",
+		"*.db",
+		"*.tmLanguage.cache",
+		"*.tmPreferences.cache",
+		"*.psd",
+		"*.psb",
+		"*.png",
+		"*.gif",
+		"*.jpg",
+		"*.jpeg",
+		"Gemfile.lock",
 		"*.pyc",
 		"*.pyo",
 		"*.exe",
 		"*.dll",
+		"*.ico",
 		"*.obj",
 		"*.o",
 		"*.a",
 		"*.lib",
-		"*.log",
 		"*.so",
 		"*.dylib",
 		"*.ncb",
@@ -23,10 +33,19 @@
 		"*.suo",
 		"*.pdb",
 		"*.idb",
+		".DS_Store",
+		"*.pdf",
 		"*.class",
-		"*.psd",
-		"*.db",
-		"*.pdf"
+		"*.mov",
+		"*.mp3",
+		"*.mp4",
+		"*.swf",
+		"*.xls",
+		"*.bak",
+		"*.backup",
+		"*.acorn",
+		"*.license",
+		"*.zargo*"
 	],
 	"folder_exclude_patterns":
 	[
@@ -43,18 +62,20 @@
 		"script",
 		"tmp"
 	],
-	"font_size": 14.0,
+	"font_face": "monaco",
+	"font_size": 13.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 	],
+	"indent_to_bracket": true,
 	"rulers":
 	[
-		80
+		85
 	],
 	"save_on_focus_lost": true,
-	"tab_size": 2,
+	"tab_size": 4,
 	"theme": "Soda Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,

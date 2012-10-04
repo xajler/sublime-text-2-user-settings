@@ -1,29 +1,75 @@
 [
-	{ "keys": ["j", "j"], "command": "exit_insert_mode", "context": [ { "key": "setting.command_mode", "operand": false }, { "key": "setting.is_widget", "operand": false } ] },
-  { "keys": ["super+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+	{ "keys": [",", "h"], "command": "exit_insert_mode", "context": [ { "key": "setting.command_mode", "operand": false }, { "key": "setting.is_widget", "operand": false } ] },
+  { "keys": [",", "p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}, "context": [{"key": "setting.command_mode"}] },
+  { "keys": [",", "n"], "command": "advanced_new_file", "context": [{"key": "setting.command_mode"}] },
+   // go to line
+  { "keys": [",", "g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "context": [{"key": "setting.command_mode"}] },
+  { "keys": [",", "p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}, "context": [{"key": "setting.command_mode"}] },
+
+  { "keys": [",", "m"], "command": "list_rails_models", "context": [{"key": "setting.command_mode"}] },
+  { "keys": [",", "c"], "command": "list_rails_controllers", "context": [{"key": "setting.command_mode"}] },
+  { "keys": [",", "v"], "command": "list_rails_views", "context": [{"key": "setting.command_mode"}] },
+  { "keys": [",", "e"], "command": "list_rails_tests", "context": [{"key": "setting.command_mode"}] },
+
+  // Ruby Test
+  { "keys": [",", "s"], "command": "run_single_ruby_test" }, // single test
+  { "keys": [",", "r"], "command": "run_all_ruby_test" }, // test file
+  { "keys": [",", "t"], "command": "run_last_ruby_test" }, // test file
+  { "keys": ["super+shift+x"], "command": "show_test_panel" }, // show test panel
+  { "keys": ["alt+shift+v"], "command": "verify_ruby_file" }, // verify ruby syntax,
+  { "keys": [",", "."], "command": "switch_between_code_and_test", "args": {"split_view": false}, "context" : [
+    { "key": "selector", "operator": "equal", "operand": "source.ruby", "match_all": true }
+  ]}, // switch between code and test in single mode
+  { "keys": [",", "v"], "command": "switch_between_code_and_test", "args": {"split_view": true}, "context" : [
+    { "key": "selector", "operator": "equal", "operand": "source.ruby", "match_all": true }
+  ]}, // switch between code and test in split view,
+
   { "keys": ["ctrl+super+r"], "command": "reveal_in_side_bar" },
-  { "keys": ["super+alt+w"], "command": "close_other_tabs" },
-  { "keys": ["ctrl+]"], "command": "navigate_to_definition" },
-  { "keys": ["ctrl+shift+down"], "command": "open_rspec_file", "args": {"option": "next"} },
   { "keys": ["super+shift+c"], "command": "copy_path_to_clipboard" },
   { "keys": ["super+shift+v"], "command": "paste" },
   { "keys": ["super+v"], "command": "paste_and_indent" },
   { "keys": ["super+alt+]"], "command": "reindent", "args": { "single_line": false } },
-  { "keys": ["super+r"], "command": "run_tests", "args": {"single": false} },
-  { "keys": ["super+shift+r"], "command": "run_tests", "args": {"single": true} },
-  { "keys": [",", "m"], "command": "list_rails_models", "context": [{"key": "setting.command_mode"}] },
-  { "keys": [",", "c"], "command": "list_rails_controllers", "context": [{"key": "setting.command_mode"}] },
-  { "keys": [",", "v"], "command": "list_rails_views", "context": [{"key": "setting.command_mode"}] },
-  { "keys": [",", "h"], "command": "list_rails_helpers", "context": [{"key": "setting.command_mode"}] },
-  { "keys": [",", "x"], "command": "list_rails_fixtures", "context": [{"key": "setting.command_mode"}] },
-  { "keys": [",", "t"], "command": "list_rails_tests", "context": [{"key": "setting.command_mode"}] },
-  { "keys": [",", "i"], "command": "list_rails_javascripts", "context": [{"key": "setting.command_mode"}] },
-  { "keys": [",", "y"], "command": "list_rails_stylesheets", "context": [{"key": "setting.command_mode"}] },
-  { "keys": [",", "p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}, "context": [{"key": "setting.command_mode"}] },
+
   { "keys": ["ctrl+h"], "command": "prev_view" },
   { "keys": ["ctrl+l"], "command": "next_view" },
-  { "keys": [",", "n"], "command": "advanced_new_file"},
-  { "keys": ["super+r"], "command": "run_tests", "args": {"single": false} },
-  { "keys": ["super+shift+r"], "command": "run_tests", "args": {"single": true} },
-  { "keys": [",", "t"], "command": "open_rspec_file", "args": {"option": "next"} }
+  {
+    "keys": [",", "u"],
+    "command": "set_layout",
+    "args":
+    {
+      "cols": [0.0, 1.0],
+      "rows": [0.0, 1.0],
+      "cells": [[0, 0, 1, 1]]
+    }
+  },
+  {
+    "keys": [",", "i"],
+    "command": "set_layout",
+    "args":
+    {
+      "cols": [0.0, 0.5, 1.0],
+      "rows": [0.0, 1.0],
+      "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+    }
+  },
+  {
+    "keys": ["alt+left"],
+    "command": "set_layout",
+    "args":
+    {
+      "cols": [0.0, 0.66, 1.0],
+      "rows": [0.0, 1.0],
+      "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+    }
+  },
+  {
+    "keys": ["alt+right"],
+    "command": "set_layout",
+    "args":
+    {
+      "cols": [0.0, 0.33, 1.0],
+      "rows": [0.0, 1.0],
+      "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+    }
+  }
 ]

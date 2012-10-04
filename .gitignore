@@ -1,1 +1,3 @@
 *.pyc
+*.last-run
+*.tmTheme.cache

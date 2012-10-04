@@ -1,5 +1,5 @@
 {
-	"auto_upgrade_last_run": 1349258759,
+	"auto_upgrade_last_run": 1349338944,
 	"installed_packages":
 	[
 		"AdvancedNewFile",
@@ -10,10 +10,12 @@
 		"RSpec",
 		"RSpec (snippets and syntax)",
 		"Ruby 1.9 Hash Converter",
+		"RubyTest",
 		"SCSS",
 		"Simple Rails Navigator",
 		"SublimeLinter",
 		"Theme - Soda",
-		"VintageEx"
+		"VintageEx",
+		"ZenCoding"
 	]
 }
