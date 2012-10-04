@@ -4,6 +4,14 @@
 * Sublime Text 2 build 2220.
 * Mac OSX Mountain Lion.
 
+## Install (Mac)
+
+* `git clone git://github.com/xajler/sublime-text-2-user-settings.git`
+* Link to `~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User`
+
+Example:
+`ln -s ~/src/sublime-text-2-user-settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User`
+
 ## Key Bindings
 
 #### Normal
@@ -73,11 +81,11 @@
     <td>Split or Columns: 2 Layout</td>
   </tr>
   <tr>
-    <td><code>alt + ←</code></td>
+    <td><code>alt + &larr;</code></td>
     <td>Make Left Column 2/3 wide</td>
   </tr>
   <tr>
-    <td><code>alt + → </code></td>
+    <td><code>alt + &rarr;</code></td>
     <td>Make Right Column 2/3 wide</td>
   </tr>
   <tr>
